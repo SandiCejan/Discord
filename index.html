@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Discord</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="img/DiscordLogo.png" type="image/png">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script type="text/javascript">
+        function login(form) {
+            if (form.PASSWORD.value.length > 7) {
+                const href = $(this).attr('href')
+                Swal.fire({
+                    title: "Login successfull",
+                    text: "You have been successfully logged in to Discord! You will be redirected to actual Discord :)",
+                    icon: "success",
+                    button: "OK",
+                }).then((result) => {
+                    window.location.href = "https://discord.com";
+                })
+                return false;
+            } else {
+                document.getElementById("EnterInfo").style.display = "block";
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="Content">
+        <div id="LeftContent">
+            <h1>Welcome back!</h1>
+            <h2>We're so excited to see you again!</h2>
+            <form action="javascript:login(this)" method="post">
+                <h6><b>EMAIL</b></h6>
+                <input type="email" name="EMAIL" id="EMAIL" autofocus="autofocus" required>
+                <h6><b>PASSWORD</b></h6>
+                <input type="password" name="PASSWORD" id="PASSWORD" required maxlength="20">
+
+                <div id="ForgotPass">
+                    <a href="https://discord.com/login" target="_blank">Forgot your password?</a>
+                </div>
+                <div id="EnterInfo">
+                    <p>Please, enter all needed informations</p>
+                </div>
+                <input type="submit" value="Login" id="submit">
+                <div id="AlreadyText">
+                    <p>Need an account? <a href="register.html">Register</a></p>
+                </div>
+            </form>
+        </div>
+        <div id="RightContent">
+            <img src="img/QRCode.png" id="QRCode" alt="">
+            <h1>Log in with QR code</h1>
+            <h2>Scan this with the <strong>Discord mobile app</strong> to log in instantly.</h2>
+        </div>
+
+    </div>
+</body>
+
+</html>

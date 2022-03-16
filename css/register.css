@@ -1,0 +1,263 @@
+
+body {
+    background: url("../img/Background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background-repeat: round;
+}
+
+#Content {
+    width: 450px;
+    padding: 30px;
+    border-radius: 4px;
+    background-color: rgb(47, 49, 55);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-size: 27px;
+    text-align: center;
+    color: white;
+    margin: 0px;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.pod {
+    font-size: 10px;
+}
+
+h6 {
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+b {
+    font-size: 12px;
+    margin-bottom: 3px;
+    color: rgb(186, 187, 196);
+    font-family: system-ui;
+}
+
+input {
+    background-color: rgb(42, 43, 48);
+    width: 436px;
+    height: 35px;
+    font-size: 16px;
+    color: gainsboro;
+    border: 1px rgb(27, 37, 3) solid;
+    border-radius: 4px;
+    transition: border .25s ease-in-out;
+    padding-left: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+input:hover {
+    border-color: rgb(23, 23, 28);
+}
+
+input:focus {
+    border: 1px rgb(46, 86, 219) solid;
+}
+
+input:focus-visible {
+    outline: 0px white solid;
+}
+
+select {
+    background-color: rgb(42, 43, 48);
+    width: 100%;
+    height: 35px;
+    font-size: 16px;
+    color: gainsboro;
+    border: 1px rgb(27, 37, 3) solid;
+    border-radius: 4px;
+    transition: border .25s ease-in-out;
+    padding-left: 10px;
+}
+
+select:hover {
+    border-color: rgb(23, 23, 28);
+}
+
+select:focus {
+    border: 1px rgb(46, 86, 219) solid;
+}
+
+select:focus-visible {
+    outline: 0px white solid;
+}
+
+input[type=checkbox] {
+    background-color: rgb(42, 43, 48);
+    height: 35px;
+    font-size: 13px;
+    color: gainsboro;
+    margin-top: 5px;
+    width: 26px;
+    height: 26px;
+    margin-top: 20px;
+}
+
+label {
+    text-align: center;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #1f709b;
+    height: 45px;
+    font-weight: 500;
+    padding-left: 0;
+    margin: 10px 0;
+}
+
+input[type=submit]:hover {
+    border-color: rgb(23, 23, 28);
+    cursor: pointer;
+    background-color: rgb(60 88 136);
+}
+
+input[type=date] {
+    width: 438px;
+}
+
+a {
+    text-decoration: none;
+    color: cornflowerblue;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#TermsText {
+    display: inline-block;
+    margin-top: -7px;
+    font-size: 11px;
+    color: gainsboro;
+    font-family: sans-serif;
+}
+
+#AlreadyText {
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+#PassNoMatch {
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: red;
+    display: none;
+}
+
+.sb {
+    display: block;
+    overflow: auto;
+    height: 2em;
+}
+
+.sb::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+}
+
+.sb::-webkit-scrollbar-thumb {
+    background: #000;
+}
+
+.control {
+    margin-top: 15px;
+    /* font-family: arial; */
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 5px;
+    padding-top: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    color: rgb(186, 187, 196);
+    text-align: left;
+}
+
+.control input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.control_indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: 1px solid rgb(148, 149, 156);
+    border-radius: 3px;
+}
+
+.control input:checked~.control_indicator {
+    background: #5192f5;
+}
+
+.control:hover input:not([disabled]):checked~.control_indicator,
+.control input:checked:focus~.control_indicator {
+    background: #5575f3;
+}
+
+.control input:disabled~.control_indicator {
+    background: #e6e6e6;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.control_indicator:after {
+    box-sizing: unset;
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+.control input:checked~.control_indicator:after {
+    display: block;
+}
+
+.control-checkbox .control_indicator:after {
+    left: 8px;
+    top: 4px;
+    width: 3px;
+    height: 8px;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.control-checkbox input:disabled~.control_indicator:after {
+    border-color: #7b7b7b;
+}
+
+#Errorimg{
+    width: 20px;
+    float: right;
+    margin-right: -24px;
+    margin-top: 4px;
+    display: none;
+}
+#OKimg{
+    width: 14px;
+    float: right;
+    margin-right: -21px;
+    margin-top: 11px;
+    display: none;
+}
